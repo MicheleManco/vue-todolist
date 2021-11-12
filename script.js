@@ -14,7 +14,7 @@ var myapp = new Vue({
         tasks: [
             {
                 text: "fare la spesa",
-                done: true
+                done: false
             },
             { 
                 text: 'Fare il bucato',
@@ -24,7 +24,6 @@ var myapp = new Vue({
                 text: 'lavare i piatti',
                 done: false 
             }
-
         ]
     },
     methods: {
@@ -34,7 +33,7 @@ var myapp = new Vue({
         addTask: function() {
             newTask = {
                 text: this.textTasks,
-                done: true
+                done: false
             }
            this.tasks.push(newTask)
         }

@@ -12,7 +12,9 @@
 
         <input type="text" v-model="textTasks" placeholder="inserisci una task">
         <button @click="addTask">new task</button>
-        <ul>
+        
+        <div v-if="tasks.length === 0">Non hai tasks da svolgere</div>
+        <ul v-else>
             <li v-for="task, i in tasks" :keys="i" >
                 {{task.text}}
                 <span @click="removeTask(i)"> &#10754</span>
