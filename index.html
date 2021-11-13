@@ -9,18 +9,23 @@
 </head>
 <body>
     <div id="myapp">
-
-        <input type="text" v-model="textTasks" placeholder="inserisci una task">
-        <button @click="addTask">new task</button>
+        <header>
+            <h1>Minimal Task Menager</h1>
+            <input type="text" v-model="textTasks" @keyup.enter="addTask" placeholder="inserisci una task">
+            <button @click="addTask">new task</button>
+        </header>
+                
+        <main>
+            <div v-if="tasks.length === 0">Non hai tasks da svolgere</div>
+            <ul v-else>
+                <li :class="tasks[i].done === true ? 'don': ''"v-for="task, i in tasks" :keys="i" >
+                    {{task.text}}
+                    <span @click="linedone(i)"> &#9745</span>
+                    <span @click="removeTask(i)">&#9746 </span>
+                </li>
+            </ul>
+        </main>
         
-        <div v-if="tasks.length === 0">Non hai tasks da svolgere</div>
-        <ul v-else>
-            <li :class="tasks[i].done === true ? 'don': ''"v-for="task, i in tasks" :keys="i" >
-                {{task.text}}
-                <span @click="linedone(i)"> &#9745</span>
-                <span @click="removeTask(i)">&#9746 </span>
-            </li>
-        </ul>
     </div>
 
 

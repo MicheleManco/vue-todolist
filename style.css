@@ -1,3 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
 .don {
     text-decoration: line-through;
+}
+
+h1{
+margin-right: 40px;
+}
+
+main ul li{
+    list-style: none;
+}
+
+ul li span {
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+header input {
+    margin-right: 20px;
+}
+
+main {
+    font-size: 30px;
+    background-color: rgb(39, 39, 39);
+    color: rgb(255, 233, 200);
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+#myapp {
+    background-color: blueviolet;
+    height: 100vh;
 }

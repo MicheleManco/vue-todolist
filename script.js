@@ -36,8 +36,9 @@ var myapp = new Vue({
                 done: false
             }
             if (this.textTasks !== "") {
-                this.tasks.push(newTask)
-            }   
+                this.tasks.push(newTask);
+            }
+            this.textTasks = "";
         },
         linedone: function(index) {
             this.tasks[index].done = true;
