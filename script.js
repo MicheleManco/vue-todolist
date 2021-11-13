@@ -37,8 +37,11 @@ var myapp = new Vue({
             }
             if (this.textTasks !== "") {
                 this.tasks.push(newTask)
-            }
-           
+            }   
+        },
+        linedone: function(index) {
+            this.tasks[index].done = true;
+            console.log(this.tasks[index].done);
         }
     }
 });

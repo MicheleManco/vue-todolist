@@ -15,9 +15,10 @@
         
         <div v-if="tasks.length === 0">Non hai tasks da svolgere</div>
         <ul v-else>
-            <li v-for="task, i in tasks" :keys="i" >
+            <li :class="tasks[i].done === true ? 'don': ''"v-for="task, i in tasks" :keys="i" >
                 {{task.text}}
-                <span @click="removeTask(i)"> &#10754</span>
+                <span @click="linedone(i)"> &#9745</span>
+                <span @click="removeTask(i)">&#9746 </span>
             </li>
         </ul>
     </div>
